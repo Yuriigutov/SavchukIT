@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #26303b;
+}
+
+.wraper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+/*  */
+.slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 900px;
+  height: auto;
+}
+
+.sliders-items {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  animation: sliderAnimation 10s infinite;
+}
+
+.sliders-items .item {
+  width: 20%;
+  transition: 0.9s;
+}
+
+.sliders-items .item img {
+  width: 100%;
+  height: 600px;
+}
+
+.sliders-items input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.slider-nav {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-nav .slider-nav-item {
+  width: 60px;
+  height: 15px;
+  border: 2px solid #fff;
+  margin: 7px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.slider-nav .slider-nav-item:hover {
+  background-color: #dfe3d9;
+}
+/* Основна магія тут */
+#s1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#s2:checked ~ .s1 {
+  margin-left: -20%;
+}
+
+#s3:checked ~ .s1 {
+  margin-left: -40%;
+}
+
+/*  */
+@keyframes sliderAnimation {
+  0% {
+    margin-left: 0;
+  }
+  33.33% {
+    margin-left: -100%;
+  }
+  66.66% {
+    margin-left: -200%;
+  }
+}
+
+.Audio {
+  display: flex;
+  justify-content: center;
+}
+
+.animation {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+}
